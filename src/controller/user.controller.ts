@@ -107,7 +107,7 @@ export const createUser = async (req: Request, res: Response) => {
         secure: true, // true for 465, false for other ports
         auth: {
           user: "bader.mohamd998@gmail.com", // generated ethereal user
-          pass: "giuifuflxvabfgfp", // generated ethereal password
+          pass: "XXXXXXXXXXX", // generated ethereal password
         },
         tls: {
           rejectUnauthorized: false
