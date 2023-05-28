@@ -34,7 +34,7 @@ declare module 'express-session' {
   }
   
   export {};
-app.get('/', function (req, res) {
+app.use('/', function (req, res) {
     req.session.loginUser=""
     res.render('views/index');
 });
