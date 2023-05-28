@@ -7,10 +7,9 @@
     "generate": "npx prisma generate",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.ts",
+    "build": "npx tsc",
+    "start": "node dist/app.js"
   
-  
-    "start": "./node_modules/.bin/netlify-lambda serve dist",
-    "build": "./node_modules/.bin/netlify-lambda npx tsc"
   },
   "keywords": [],
   "author": "",
