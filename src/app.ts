@@ -46,7 +46,7 @@ interface SessionData {
     LoginUser: string; // new property
 }
 
-app.use("/user/.netlify/functions/api", userRoute);
+app.use("/.netlify/functions/api", userRoute);
 
 
 
