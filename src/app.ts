@@ -46,7 +46,7 @@ interface SessionData {
     LoginUser: string; // new property
 }
 
-app.use("/.netlify/functions/api", userRoute);
+app.use("/user", userRoute);
 
 
 
@@ -55,6 +55,3 @@ app.use("/.netlify/functions/api", userRoute);
 app.listen(Port, () => console.log(`⚡️[server]:listening on  port ${Port}`));
 
 
-module.exports.handler = serverless(app);
-
-module.exports = app;
