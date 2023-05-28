@@ -5,6 +5,7 @@ import userRoute from './routes/user.route';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import session from 'express-session'
+const serverless = require("serverless-http");
 dotenv.config();
 
 const app: Application = express();
@@ -31,11 +32,11 @@ declare module 'express-session' {
     interface SessionData {
         loginUser: string;
     }
-  }
-  
-  export {};
+}
+
+export { };
 app.get('/', function (req, res) {
-    req.session.loginUser=""
+    req.session.loginUser = ""
     res.render('views/index');
 });
 interface SessionData {
@@ -45,7 +46,7 @@ interface SessionData {
     LoginUser: string; // new property
 }
 
-app.use("/user", userRoute);
+app.use("/user/.netlify/functions/api", userRoute);
 
 
 
