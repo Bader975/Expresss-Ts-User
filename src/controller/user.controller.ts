@@ -45,15 +45,15 @@ export const Login = async (req: Request, res: Response) => {
       console.log(req.session);
 
 
-      // res.render("views/profile", {
-      //   message: `اهلا وسهلا بك ${user.name} `,
-      //   token: token
-      // })
-
-      res.json({
+      res.render("views/profile", {
         message: `اهلا وسهلا بك ${user.name} `,
         token: token
       })
+
+      // res.json({
+      //   message: `اهلا وسهلا بك ${user.name} `,
+      //   token: token
+      // })
       // -------------------
 
       // res.send({

@@ -2,6 +2,7 @@ import express, { Request, Response, Application } from 'express';
 import * as dotenv from "dotenv";
 import { connectDB } from "./config/db";
 import userRoute from './routes/user.route';
+import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import session from 'express-session'
 dotenv.config();
@@ -9,7 +10,7 @@ dotenv.config();
 const app: Application = express();
 const Port = process.env.PORT;
 app.use(express.json());
-
+app.use(cors());
 app.use(cookieParser());
 
 app.use(session({
@@ -52,4 +53,8 @@ app.use("/user", userRoute);
 
 app.listen(Port, () => console.log(`⚡️[server]:listening on  port ${Port}`));
 
+
+function cros(): any {
+    throw new Error('Function not implemented.');
+}
 
